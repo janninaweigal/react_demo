@@ -1,0 +1,2 @@
+-- npm install -g create-react-app
+-- create-react-app react-demo (npx create-react-app react-demo)
