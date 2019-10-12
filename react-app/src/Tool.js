@@ -8,7 +8,8 @@ class Tool extends Component {
             inputValue: '',
             list: [],
             undoValue: '',
-            display: 'block'
+            display: 'block',
+            toggleName: 'show'
         }
     }
     render() { 
@@ -44,9 +45,15 @@ class Tool extends Component {
                     }
                 </ul>
                 <hr/>
-                
+                <button onClick={this.toggleAnimation.bind(this)}>显示或者隐藏动画</button>
+                <div className={this.state.toggleName} style={{"width":"200px","height":"200px","border":"1px solid red"}}>这是动画</div>
             </Fragment>
         );
+    }
+    toggleAnimation(){
+        this.setState({
+            toggleName:this.state.toggleName==='show'?'hide':'show'
+        })
     }
     updateMainState(){
         // propTypes 定义了类型，则传递的值类型 需要与之相同
