@@ -6,7 +6,9 @@ class Tool extends Component {
         super(props) // 调用父类的构造函数，固定写法
         this.state = {
             inputValue: '',
-            list: []
+            list: [],
+            undoValue: '',
+            display: 'block'
         }
     }
     render() { 
@@ -42,6 +44,7 @@ class Tool extends Component {
                     }
                 </ul>
                 <hr/>
+                
             </Fragment>
         );
     }
