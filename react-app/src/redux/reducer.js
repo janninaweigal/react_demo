@@ -6,7 +6,7 @@ const defaultState = {
 export default (state=defaultState,action)=>{
     if(action.type===CHANGE_INPUT){
         const newState = JSON.parse(JSON.stringify(state))
-        newState.inputValue = action.inputValue
+        newState.inputValue = action.value
         return newState
     }
     if(action.type===GET_LIST){
