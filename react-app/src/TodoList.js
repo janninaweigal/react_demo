@@ -1,6 +1,7 @@
 import React, { Component,Fragment } from 'react';
 import store from './redux/index'
 import {changeInputAction} from './redux/actionCreators.js'
+import NoState from './noState.js'
 class TodoList extends Component {
     constructor(props) {
         super(props)
@@ -13,6 +14,7 @@ class TodoList extends Component {
         return (
             <Fragment>
                 <input value={this.state.inputValue} onChange={this.changeValue.bind(this)}/>
+                <NoState width={123}/>
             </Fragment>
         );
     }

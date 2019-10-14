@@ -5,6 +5,7 @@ import App from './App.js'
 import routerTest from './routerTest.js'
 import AntdDesign from './antd.js'
 import TodoList from './TodoList.js'
+import NoState from './noState.js'
 function AppRouter() {
     return (
         <Router>
@@ -14,6 +15,7 @@ function AppRouter() {
                 <li><Link to="/list/">路由一</Link> </li>
                 <li><Link to="/list/123">路由二</Link> </li>
                 <li><Link to="/todoList">TodoList</Link></li>
+                <li><Link to="/noState">无状态组件的改写</Link></li>
             </ul>
             {/* exact 精准匹配 */}
             <Route path="/" exact component={App} />
@@ -21,6 +23,7 @@ function AppRouter() {
             <Route path="/list" exact component={routerTest} />
             <Route path="/list/:id" exact component={routerTest} />
             <Route path="/todoList" component={TodoList} />
+            <Route path="/noState" component={NoState} />
         </Router>
       );
 }
