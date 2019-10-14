@@ -1,5 +1,6 @@
 import React, { Component,Fragment } from 'react'
 import axios from 'axios'
+import {connect} from 'react-redux'  //引入连接器
 class axiosMock extends Component {
     state = {
         userList:[]
@@ -11,6 +12,8 @@ class axiosMock extends Component {
                 {this.state.userList.map((item,key)=>{
                     return <h3 key={key}>{item.name}</h3>
                 })}
+                <hr/>
+                <p>这是react-redux 获取的值：{this.props.inputValue}</p>
             </Fragment>
         );
     }
@@ -27,5 +30,10 @@ class axiosMock extends Component {
         .catch((error)=>{console.log('axios 获取数据失败'+error)})
     }
 }
- 
-export default axiosMock;
+// 映射关系就是把原来的state映射成组件中的props属性
+ const stateToProps = (state)=>{
+     return {
+        inputValue:state.inputValue
+     }
+ }
+export default connect(stateToProps,null)(axiosMock);

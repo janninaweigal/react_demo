@@ -22,4 +22,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ### npm install --save react-router-dom
 ### -------------------------Redux-thunk中间件的安装和配置
 ### npm install --save redux-thunk
+### 或者 中间件Redux-saga
+### npm install --save redux-saga
 

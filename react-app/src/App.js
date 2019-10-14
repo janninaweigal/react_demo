@@ -5,6 +5,10 @@ import LifeCycle from './lifecycle.js'
 import DisplayComponent from './disableComponent.js'
 import MockAxios from './getAxiosData.js'
 import TransitionGroup from './transitionGroup'
+
+import {Provider} from 'react-redux'
+import store from './redux/index'
+
 class App extends Component {
     constructor(){
         super()
@@ -35,7 +39,10 @@ class App extends Component {
                     return <DisplayComponent key={index} value={item} deleteComponent={this.deleteComponent.bind(this,index)}/>
                 })}
                 <hr/>
-                <MockAxios/>
+                <Provider store={store}>
+                    <MockAxios/>
+                </Provider>
+                
                 <hr/>
                 <TransitionGroup/>
             </div>
