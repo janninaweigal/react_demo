@@ -4,6 +4,7 @@ import InputFor from './label.js'
 import LifeCycle from './lifecycle.js'
 import DisplayComponent from './disableComponent.js'
 import MockAxios from './getAxiosData.js'
+import TransitionGroup from './transitionGroup'
 class App extends Component {
     constructor(){
         super()
@@ -35,6 +36,8 @@ class App extends Component {
                 })}
                 <hr/>
                 <MockAxios/>
+                <hr/>
+                <TransitionGroup/>
             </div>
         );
     }
