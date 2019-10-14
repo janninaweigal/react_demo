@@ -19,7 +19,7 @@ class AntDesign extends Component {
                 }}/>
                 <Button type="primary" onClick={this.addItem.bind(this)}>添加</Button>
                 <List
-                    grid={{ gutter: 16, column: 4 }}
+                    bordered
                     dataSource={this.state.list}
                     renderItem={item => <List.Item>{item}</List.Item>}
                 />
