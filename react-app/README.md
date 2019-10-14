@@ -20,4 +20,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ### yarn add antd
 ### -------------------------路由
 ### npm install --save react-router-dom
+### -------------------------Redux-thunk中间件的安装和配置
+### npm install --save redux-thunk
 
