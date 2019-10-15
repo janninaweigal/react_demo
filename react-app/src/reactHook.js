@@ -1,11 +1,12 @@
 import React,{useState,useEffect} from 'react'
 import Example03 from './reactHook03.js'
+import Example04 from './reactHook04.js'
 function Example(){
     const [count,setCount] = useState(0);
     const [name,setName] = useState('linbin')
     const [age,setAge] = useState(18)
 
-    // 用useEllfect函数 来替换 生命周期函数
+    // 用useEffect函数 来替换 生命周期函数
     // 每次渲染都会调用一遍useEffet
     // 不加useEffect第二个参数，每次状态发生改变，都会进行解绑操作
     // useEffect第二个参数,可以传入解绑的参数
@@ -31,6 +32,8 @@ function Example(){
             }}>更改年龄</button>
             <hr/>
             <Example03/>
+            <hr/>
+            <Example04/>
         </div>
     )
 }

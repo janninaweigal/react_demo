@@ -8,7 +8,7 @@ function Example04(){
             case 'sub':
                 return state-1;
             default:
-                return
+                 return state;
         }
     },0)
     return (
