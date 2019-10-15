@@ -7,6 +7,7 @@ import AntdDesign from './antd.js'
 import TodoList from './TodoList.js'
 import NoState from './noState.js'
 import Hook from './reactHook.js'
+import HookTwo from './reactHook01.js'
 function AppRouter() {
     return (
         <Router>
@@ -18,6 +19,7 @@ function AppRouter() {
                 <li><Link to="/todoList">TodoList</Link></li>
                 <li><Link to="/noState">无状态组件的改写</Link></li>
                 <li><Link to="/hook">React Hooks写法</Link></li>
+                <li><Link to="/HookTwo">React Hooks 父子组件传值</Link></li>
             </ul>
             {/* exact 精准匹配 */}
             <Route path="/" exact component={App} />
@@ -27,6 +29,7 @@ function AppRouter() {
             <Route path="/todoList" component={TodoList} />
             <Route path="/noState" component={NoState} />
             <Route path="/hook" component={Hook} />
+            <Route path="/HookTwo" component={HookTwo} />
         </Router>
       );
 }
