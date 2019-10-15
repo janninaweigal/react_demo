@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from 'react'
+import Example03 from './reactHook03.js'
 function Example(){
     const [count,setCount] = useState(0);
     const [name,setName] = useState('linbin')
@@ -28,6 +29,8 @@ function Example(){
             <h3>年龄：{age}</h3>----<button onClick={()=>{
                 setAge(age+1)
             }}>更改年龄</button>
+            <hr/>
+            <Example03/>
         </div>
     )
 }
