@@ -1,4 +1,4 @@
-import {CHANGE_INPUT,GET_LIST}  from './actionTypes.js'
+import {CHANGE_INPUT,GET_LIST,GET_SAGA_LIST}  from './actionTypes.js'
 import axios from 'axios'
 export const changeInputAction = (value)=>{
     return {
@@ -24,3 +24,8 @@ export const getTodoList = ()=>{
         .catch((error)=>{console.log('axios 获取数据失败'+error)})
     }
 }
+
+export const getSagaList = (data)=>({
+    type:GET_SAGA_LIST,
+    data
+})

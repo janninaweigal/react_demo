@@ -1,6 +1,6 @@
 import React, { Component,Fragment } from 'react';
 import store from './redux/index'
-import {changeInputAction,getTodoList} from './redux/actionCreators.js'
+import {changeInputAction,getSagaList} from './redux/actionCreators.js'
 import NoState from './noState.js'
 
 class TodoList extends Component {
@@ -15,7 +15,7 @@ class TodoList extends Component {
         return (
             <Fragment>
                 <input value={this.state.inputValue} onChange={this.changeValue.bind(this)}/>
-                <NoState width={123}/>
+                <NoState width={this.state.inputValue}/>
                 {
                     this.state.list.map((item,key)=>{
                         return <h3 key={key}>{item.name}</h3>
@@ -25,7 +25,7 @@ class TodoList extends Component {
         );
     }
     componentDidMount(){
-        const action = getTodoList()
+        const action = getSagaList()
         store.dispatch(action)
     }
     storeChange(){
